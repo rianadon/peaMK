@@ -1,0 +1,8 @@
+---
+include:
+  - board: cosmos_lemon_wireless
+    shield: peamk_left
+    snippet: zmk-usb-logging
+  - board: cosmos_lemon_wireless
+    shield: peamk_right
+    snippet: zmk-usb-logging

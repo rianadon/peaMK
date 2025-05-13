@@ -1,0 +1,33 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                        bindings = <
+                        &mat N0 N0 &mat N0 N1 &mat N0 N2 &mat N0 N3 &mat N0 N4 &mat N0 N5 &mat N0 N6
+                        &mat N0 N7 &mat N0 N8 &mat N0 N9 &mat N0 A &mat N0 B &mat N0 C &mat N0 D
+                        &mat N1 N0 &mat N1 N1 &mat N1 N2 &mat N1 N3 &mat N1 N4 &mat N1 N5 &mat N1 N6
+                        &mat N1 N7 &mat N1 N8 &mat N1 N9 &mat N1 A &mat N1 B &mat N1 C &mat N1 D
+                        &mat N2 N0 &mat N2 N1 &mat N2 N2 &mat N2 N3 &mat N2 N4 &mat N2 N5 &mat N2 N6
+                        &mat N2 N7 &mat N2 N8 &mat N2 N9 &mat N2 A &mat N2 B &mat N2 C &mat N2 D
+                        &mat N3 N0 &mat N3 N1 &mat N3 N2 &mat N3 N3 &mat N3 N4 &mat N3 N5 &mat N3 N6
+                        &mat N3 N7 &mat N3 N8 &mat N3 N9 &mat N3 A &mat N3 B &mat N3 C &mat N3 D
+                        &mat N4 N0 &mat N4 N1 &mat N4 N2 &mat N4 N3 &mat N4 N4 &mat N4 N5 &mat N4 N6
+                        &mat N4 N7 &mat N4 N8 &mat N4 N9 &mat N4 A &mat N4 B &mat N4 C &mat N4 D
+                        &mat N5 N0 &mat N5 N1 &mat N5 N2 &mat N5 N3 &mat N5 N4 &mat N5 N5 &mat N5 N6
+                        &mat N5 N7 &mat N5 N8 &mat N5 N9 &mat N5 A &mat N5 B &mat N5 C &mat N5 D
+                        &mat N6 N0 &mat N6 N1 &mat N6 N2 &mat N6 N3 &mat N6 N4 &mat N6 N5 &mat N6 N6
+                        &mat N6 N7 &mat N6 N8 &mat N6 N9 &mat N6 A &mat N6 B &mat N6 C &mat N6 D
+                        >;
+                };
+        };
+};

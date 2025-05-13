@@ -1,0 +1,11 @@
+file_format: "1"
+id: peamk
+name: PeaMK
+type: shield
+url: https://github.com/rianadon/peamk
+features:
+  - keys
+  - studio
+siblings:
+  - peamk_left
+  - peamk_right
