@@ -16,7 +16,11 @@ The eventual goal is to on-the-fly generate a UF2 firmware for a broad range of 
 
 Currently, the project is at V1. I publish a few binaries:
 
-- `default` (COL2ROW) for flex PCBs and col2row handwiring
-- `row2col` binary if you followed my pinout and handwired Plum Twists
+- Lemon Wired
+  - `peamk_wired_default.uf2` (COL2ROW) for flex PCBs and col2row handwiring
+  - `peamk_wired_row2col.uf2` binary if you followed my pinout and handwired Plum Twists
+- Lemon Wireless
+  - `peamk_left-cosmos_lemon_wireless-zmk.uf2` for the left side of the keyboard, which must be connected through USB. COL2ROW only.
+  - `peamk_right-cosmos_lemon_wireless-zmk.uf2` for the right side of the keyboard, which is the bluetooth peripheral
 
 These print out the matrix position of each key when pressed. I also try and make sure the keyboard firmwares serve as examples of how to best configure these microcontrollers.
