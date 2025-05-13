@@ -8,9 +8,15 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/zmk/keys.h>
 
+// Tell VIK that there is 1 other device on the SPI bus.
+// You will need to increase this number if you add another SPI device.
+#define VIK_SPI_REG_START 1
+// Pulled out to an external variable so VIK can find the SPI bus.
+#define VIK_SPI_CS_PREFIX <&gpio0 4 GPIO_ACTIVE_LOW>
+
 &spi1 {
     status = "okay";
-    cs-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
+    cs-gpios = VIK_SPI_CS_PREFIX;
 
     shifter: 595@0 {
         compatible = "zmk,gpio-595";
