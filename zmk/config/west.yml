@@ -10,4 +10,5 @@ manifest:
       revision: main
       import: app/west.yml
   self:
-    path: zmk/config
+    path: config
+    import: deps.yml

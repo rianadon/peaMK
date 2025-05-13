@@ -1,0 +1,46 @@
+name: Build Firmware
+
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  build_qmk:
+    name: 'QMK Userspace Build'
+    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
+    with:
+      qmk_repo: qmk/qmk_firmware
+      qmk_ref: master
+      # Lots of hacks to put QMK stuff in the home directory, put keyboards in the qmk directory, and re-setup stuff
+      preparation_command: cp -r qmk/* . && cp -r keyboards/* qmk_firmware/keyboards/ && qmk userspace-doctor
+
+  build_zmk:
+    name: 'ZMK Userspace Build'
+    uses: rianadon/zmk/.github/workflows/build-user-config.yml@prepare-command
+    with:
+      preparation_command: cp -r zmk/* .
+      build_matrix_path: zmk/build.yaml
+
+  publish:
+    name: 'Publish Firmware'
+    runs-on: ubuntu-latest
+    needs: [build_zmk, build_qmk]
+
+    steps:
+      - name: Download binaries
+        uses: actions/download-artifact@v4
+
+      - name: Generate Release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ github.token }}
+          name: Latest Firmware
+          tag_name: latest
+          fail_on_unmatched_files: false
+          draft: false
+          prerelease: false
+          files: |
+            **/*.hex
+            **/*.bin
+            **/*.uf2
