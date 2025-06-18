@@ -4,12 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "peamk.dtsi"
+#include "peamk_c2r.dtsi"
 
 / {
 
-};
-
-&default_transform {
-    col-offset = <7>;
 };

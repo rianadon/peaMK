@@ -7,5 +7,7 @@ features:
   - keys
   - studio
 siblings:
-  - peamk_left
-  - peamk_right
+  - peamk_r2c_left
+  - peamk_c2r_left
+  - peamk_r2c_right
+  - peamk_c2r_right

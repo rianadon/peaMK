@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "peamk.dtsi"
+#include "peamk_r2c.dtsi"
 
 / {
 

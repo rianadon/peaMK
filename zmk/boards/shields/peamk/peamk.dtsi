@@ -50,6 +50,7 @@
         >;
   };
 
+  /* This has moved to peamk_c2r.dtsi and peamk_r2c.dtsi
   kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
 
@@ -73,7 +74,7 @@
             , <&shifter 5 GPIO_ACTIVE_HIGH>
             , <&shifter 6 GPIO_ACTIVE_HIGH>
             ;
-    };
+    };*/
 
   macros {
       mat: mat {
