@@ -6,6 +6,10 @@
 
 #include "peamk_c2r.dtsi"
 
+&bootloader_key_right {
+    status = "okay";
+};
+
 / {
 
 };

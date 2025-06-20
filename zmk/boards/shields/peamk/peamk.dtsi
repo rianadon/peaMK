@@ -76,11 +76,25 @@
             ;
     };*/
 
-  macros {
-      mat: mat {
-          compatible = "zmk,behavior-macro-two-param";
-          #binding-cells = <2>;
-          bindings = <&kp EXCL>, <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&kp COMMA>, <&macro_param_2to1>, <&kp MACRO_PLACEHOLDER>, <&kp SPACE>;
-      };
-  };
+    macros {
+        mat: mat {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp EXCL>, <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>, <&kp COMMA>, <&macro_param_2to1>, <&kp MACRO_PLACEHOLDER>, <&kp SPACE>;
+        };
+    };
+
+    bootloader_key_left: bootloader_key_left {
+        compatible = "zmk,boot-magic-key";
+        key-position = <0>;
+        jump-to-bootloader;
+        status = "disabled";
+    };
+
+    bootloader_key_right: bootloader_key_right {
+        compatible = "zmk,boot-magic-key";
+        key-position = <20>;
+        jump-to-bootloader;
+        status = "disabled";
+    };
 };
