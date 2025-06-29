@@ -19,8 +19,10 @@ The eventual goal is to on-the-fly generate a UF2 firmware for a broad range of 
 Currently, the project is at V1. I publish a few firmware binaries:
 
 - Lemon Wired
-  - [`peamk_wired_default.uf2`] (COL2ROW) for flex PCBs and col2row handwiring
-  - [`peamk_wired_row2col.uf2`] binary if you followed my pinout and handwired Plum Twists
+  - For COL2ROW wiring (e.g. my and Skree's flex PCBs).
+    - [`peamk_wired_c2r_left.uf2`] and [`peamk_wired_c2r_right.uf2`]. Connect either side to the computer.
+  - For ROW2COL wiring (e.g. if you followed my pinout and handwired Plum Twists)
+      - [`peamk_wired_r2c_left.uf2`] and [`peamk_wired_r2c_right.uf2`]. Connect either side to the computer.
 - Lemon Wireless
   - For COL2ROW wiring (e.g. my and Skree's flex PCBs).
     - [`peamk_c2r_left-cosmos_lemon_wireless-zmk.uf2`] for the left side of the keyboard, which must be connected through USB.
@@ -31,8 +33,10 @@ Currently, the project is at V1. I publish a few firmware binaries:
 
 These print out the matrix position of each key when pressed. I also try and make sure the keyboard firmwares serve as examples of how to best configure these microcontrollers.
 
-[`peamk_wired_default.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_wired_default.uf2
-[`peamk_wired_row2col.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_wired_row2col.uf2
+[`peamk_wired_c2r_left.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_wired_c2r_left.uf2
+[`peamk_wired_c2r_right.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_wired_c2r_right.uf2
+[`peamk_wired_r2c_left.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_wired_r2c_left.uf2
+[`peamk_wired_r2c_right.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_wired_r2c_right.uf2
 [`peamk_c2r_left-cosmos_lemon_wireless-zmk.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_c2r_left-cosmos_lemon_wireless-zmk.uf2
 [`peamk_c2r_right-cosmos_lemon_wireless-zmk.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_c2r_right-cosmos_lemon_wireless-zmk.uf2
 [`peamk_r2c_left-cosmos_lemon_wireless-zmk.uf2`]: https://github.com/rianadon/peaMK/releases/download/latest/peamk_r2c_left-cosmos_lemon_wireless-zmk.uf2
