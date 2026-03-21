@@ -93,7 +93,7 @@
 
     bootloader_key_right: bootloader_key_right {
         compatible = "zmk,boot-magic-key";
-        key-position = <20>;
+        key-position = <7>;
         jump-to-bootloader;
         status = "disabled";
     };
