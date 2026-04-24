@@ -1,8 +1,33 @@
 #include QMK_KEYBOARD_H
+#include "rgblight.h"
+
+#define RELAY_PIN 11
+
+#ifdef LEMON_V4
+#define RELAY_ON 0
+#define RELAY_OFF 1
+#else
+#define RELAY_ON 1
+#define RELAY_OFF 0
+#endif // LEMON_V4
+
+bool last_led_state;
 
 void keyboard_post_init_user(void) {
   debug_enable=true;
   debug_matrix=true;
+
+  last_led_state = rgblight_get_val() > 0 ? RELAY_ON : RELAY_OFF;
+  gpio_set_pin_output(RELAY_PIN);
+  gpio_write_pin(RELAY_PIN, last_led_state);
+}
+
+void housekeeping_task_user(void) {
+  bool leds_on = rgblight_get_val() > 0 ? RELAY_ON : RELAY_OFF;
+  if (leds_on != last_led_state) {
+    last_led_state = leds_on;
+    gpio_write_pin(RELAY_PIN, leds_on);
+  }
 }
 
 enum custom_keycodes {

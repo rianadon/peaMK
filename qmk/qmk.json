@@ -1,9 +1,13 @@
 {
     "userspace_version": "1.1",
     "build_targets": [
-        ["peamk_wired", "default", {"MAKECMDGOALS":"uf2-split-left","TARGET":"peamk_wired_c2r_left"}],
-        ["peamk_wired", "default", {"MAKECMDGOALS":"uf2-split-right","TARGET":"peamk_wired_c2r_right"}],
-        ["peamk_wired", "row2col", {"MAKECMDGOALS":"uf2-split-left","TARGET":"peamk_wired_r2c_left"}],
-        ["peamk_wired", "row2col", {"MAKECMDGOALS":"uf2-split-right","TARGET":"peamk_wired_r2c_right"}],
+        ["peamk_wired", "default", {"MAKECMDGOALS":"uf2-split-left","TARGET":"peamk_wired_v4_c2r_left"}],
+        ["peamk_wired", "default", {"MAKECMDGOALS":"uf2-split-right","TARGET":"peamk_wired_v4_c2r_right"}],
+        ["peamk_wired", "row2col", {"MAKECMDGOALS":"uf2-split-left","TARGET":"peamk_wired_v4_r2c_left"}],
+        ["peamk_wired", "row2col", {"MAKECMDGOALS":"uf2-split-right","TARGET":"peamk_wired_v4_r2c_right"}],
+        ["peamk_wired", "default", {"MAKECMDGOALS":"uf2-split-left","TARGET":"peamk_wired_v5_c2r_left"}],
+        ["peamk_wired", "default", {"MAKECMDGOALS":"uf2-split-right","TARGET":"peamk_wired_v5_c2r_right"}],
+        ["peamk_wired", "row2col", {"MAKECMDGOALS":"uf2-split-left","TARGET":"peamk_wired_v5_r2c_left"}],
+        ["peamk_wired", "row2col", {"MAKECMDGOALS":"uf2-split-right","TARGET":"peamk_wired_v5_r2c_right"}],
     ]
 }
